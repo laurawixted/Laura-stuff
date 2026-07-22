@@ -34,7 +34,6 @@
   text-decoration: none;
   font-size: var(--text-small);
   letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 .nav-links a:hover,
@@ -95,7 +94,6 @@
   display: inline-block;
   font-size: var(--text-small);
   color: var(--color-accent);
-  text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: var(--space-2);
 }
@@ -149,6 +147,7 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .testimonial-author .name {
@@ -178,16 +177,42 @@ blockquote.pull-quote {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(1);
   margin-bottom: var(--space-4);
 }
 
-/* --- Contact links row --- */
-.contact-links {
-  display: flex;
-  gap: var(--space-5);
-  list-style: none;
-  margin: var(--space-5) 0 0;
+/* --- Copy email --- */
+.copy-email {
+  background: none;
+  border: none;
   padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.copy-toast {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 0;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  animation: toast-fade-in 0.2s ease-out;
+}
+
+@keyframes toast-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- Footer --- */
@@ -216,4 +241,13 @@ blockquote.pull-quote {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.footer-links li {
+  position: relative;
+}
+
+.site-footer .copy-email {
+  color: var(--color-text-secondary);
+  text-decoration-color: currentColor;
 }
