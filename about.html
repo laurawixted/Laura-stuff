@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/components.css?v=11">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,22 +29,20 @@
 
   <main id="main">
     <section class="section container-narrow">
-      <img class="profile-photo" src="images/profile.jpg" alt="Portrait of Laura Wixted">
+      <img class="profile-photo" src="images/profile-photo-transparent.png" alt="Portrait of Laura Wixted">
       <h1>About</h1>
       <p>
-        [Replace with your bio. A few short paragraphs on your background,
-        what kind of content design work you focus on, and what you care
-        about in the craft.]
+        I’m a Staff Content Designer at <a href="https://skylight.digital/" target="_blank" rel="noopener">Skylight <svg class="external-link-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>, where I design content to build user-friendly and accessible digital services for government agencies.
       </p>
       <p>
-        [Second paragraph — experience, industries, or a bit of personality.]
+        Throughout my 15+ years of content design and technical writing, I've built content frameworks and written and edited customer-facing content across industries, from DB2 tools and cybersecurity to ed tech and civic tech.
       </p>
-
-      <ul class="contact-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        <li><a href="resume.pdf">Resume</a></li>
-      </ul>
+      <p>
+        I’m passionate about creating content that's clear, concise, and accessible to all users. I enjoy collaborating with cross-functional teams to solve complex problems and deliver content that meets user needs.
+      </p>
+      <p>
+        When I'm not designing content, I enjoy hiking, reading, and exploring new places. I also love learning new skills and staying up-to-date with the latest trends in content design and user experience.
+      </p>
     </section>
 
     <section class="section container-wide">
@@ -52,23 +50,34 @@
       <div class="testimonial-grid">
 
         <div class="testimonial-card">
-          <blockquote>“[Replace with a real testimonial quote.]”</blockquote>
+          <blockquote>“She is a terrific collaborator, working equally easily with peers and both up and down the management chain. Beyond her writing and language skills, Laura has a passion for moving a team forward, sharing ideas, resources, and guidance that are practical and easy to use, making everyone around her better.”</blockquote>
           <div class="testimonial-author">
-            <img src="images/testimonial-1.jpg" alt="" width="48" height="48">
+            <img src="images/pam-mayne-linkedin.jpeg" alt="" width="48" height="48">
             <div>
-              <div class="name">[Name]</div>
-              <div class="role">[Title, Company]</div>
+              <div class="name">Pam Mayne</div>
+              <div class="role">UX Writing Manager, Pearson</div>
             </div>
           </div>
         </div>
 
         <div class="testimonial-card">
-          <blockquote>“[Replace with a real testimonial quote.]”</blockquote>
+          <blockquote>“Laura can hit the ground running no matter the starting line. A born leader, she knows the meaning of collaboration and partnership across any number of product teams. She can easily facilitate or drive customer-facing UI copy, content hierarchies, user flows, and information architecture across any platform. ”</blockquote>
           <div class="testimonial-author">
-            <img src="images/testimonial-2.jpg" alt="" width="48" height="48">
+            <img src="images/carole-linkedin.jpeg" alt="" width="48" height="48">
             <div>
-              <div class="name">[Name]</div>
-              <div class="role">[Title, Company]</div>
+              <div class="name">Carole Balawender</div>
+              <div class="role">Senior UX Writer, Cisco</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>“She consistently brought fantastic insights and ran warm, welcoming, and highly professional UX sessions that helped strengthen our practice. Her contributions, collaborative spirit, and thoughtful leadership have made a lasting impact.”</blockquote>
+          <div class="testimonial-author">
+            <img src="images/avi-chazen-linkedin.jpeg" alt="" width="48" height="48">
+            <div>
+              <div class="name">Avi Chazen</div>
+              <div class="role">Senior Content Experience Designer, Sage</div>
             </div>
           </div>
         </div>
@@ -81,10 +90,14 @@
     <div class="container-wide">
       <span>&copy; 2026 Laura Wixted</span>
       <ul class="footer-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li>
+          <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
+          <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
+        </li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
+  <script src="js/copy-email.js"></script>
 </body>
 </html>

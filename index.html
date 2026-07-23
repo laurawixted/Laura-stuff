@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/components.css?v=11">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,53 +29,76 @@
 
   <main id="main">
     <section class="hero container-narrow">
-      <h1>Hi, I'm Laura — a content designer.</h1>
+      <h1>Hi, I'm Laura, a content designer with a technical writing background.</h1>
       <p>
-        [Replace with your intro: 2–3 sentences on who you are, what you do,
-        and the kind of work you're known for.]
+        I create clear and effective content by understanding user needs and structuring information logically. I enjoy turning complex information into user-friendly experiences.
+      </p>
+      <p>
+        My approach combines user research, content strategy, and design thinking to deliver content that not only informs but also engages and delights users.
       </p>
     </section>
 
-    <section class="section container-wide">
+    <section id="work" class="section container-wide">
       <h2>Selected work</h2>
       <div class="case-study-grid">
 
         <a class="case-study-card" href="case-studies/project-one.html">
           <span class="tag">Case study</span>
-          <h3>[Project one title]</h3>
-          <p>[One-line summary of the project and your role.]</p>
+          <h3>Governance, Risk, & Compliance (GRC) tool comparison report</h3>
+          <p>Managed the content operations of a multi-author report comparing 14 GRC tools to help a government client select the best solution.</p>
         </a>
 
         <a class="case-study-card" href="case-studies/project-two.html">
           <span class="tag">Case study</span>
-          <h3>[Project two title]</h3>
-          <p>[One-line summary of the project and your role.]</p>
+          <h3>Style guide redesign</h3>
+          <p>Led the redesign of a company style guide, improving usability and adding new guidelines for UX writing and AI.</p>
         </a>
 
         <a class="case-study-card" href="case-studies/project-three.html">
           <span class="tag">Case study</span>
-          <h3>[Project three title]</h3>
-          <p>[One-line summary of the project and your role.]</p>
+          <h3>Design system launch</h3>
+          <p>Co-launched a new design system site during Pearson’s digital transformation from book publishing to digital education software.</p>
         </a>
 
         <a class="case-study-card" href="case-studies/project-four.html">
           <span class="tag">Case study</span>
-          <h3>[Project four title]</h3>
-          <p>[One-line summary of the project and your role.]</p>
+          <h3>Cybersecurity dashboard simplification</h3>
+          <p>Simplified configuration options for creating custom widgets on a cybersecurity dashboard.</p>
         </a>
 
       </div>
     </section>
+
+    <section class="section container-narrow featured-testimonial">
+      <h2 class="visually-hidden">Testimonial</h2>
+      <blockquote>“Laura has a passion for moving a team forward, sharing ideas, resources, and guidance that are practical and easy to use, making everyone around her better.”</blockquote>
+      <div class="testimonial-author">
+        <img src="images/pam-mayne-linkedin.jpeg" alt="" width="48" height="48">
+        <div>
+          <div class="name">Pam Mayne</div>
+          <div class="role">UX Writing Manager, Pearson</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-block container-narrow">
+      <button type="button" class="copy-email cta-button" title="Copy email" data-email="laurawixted@gmail.com">Get in touch</button>
+      <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container-wide">
       <span>&copy; 2026 Laura Wixted</span>
       <ul class="footer-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li>
+          <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
+          <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
+        </li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
+  <script src="js/copy-email.js"></script>
 </body>
 </html>

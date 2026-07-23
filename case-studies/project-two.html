@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style guide redesign — Laura Wixted</title>
+  <meta name="description" content="Case study: Leading the redesign of a company style guide, improving usability and adding UX writing and AI guidelines.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css?v=11">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav">
+    <div class="container-wide">
+      <a class="logo" href="../index.html">Laura Wixted</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Work</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="back-link-row container-wide">
+      <a class="back-link" href="../index.html#work"><span aria-hidden="true">&larr;</span> Back to selected work</a>
+    </div>
+
+    <article class="section container-narrow">
+      <p class="text-small text-secondary">Content Designer · 2025 · Sage</p>
+      <h1>Style guide redesign</h1>
+      <p>
+        Led the redesign of a company style guide, improving usability and adding new guidelines for UX writing and AI.
+      </p>
+
+      <h2>The problem</h2>
+      <p>
+        The Sage Style Guide was missing guidelines for UX writing and AI. In addition, the top-level navigation and the landing page tiles were too crowded to add new sections.
+      </p>
+
+      <h2>What I did</h2>
+      <p>
+        To help my team understand the value of a redesign, I conducted a full content quality audit and shared my findings along with a demo of a prototype of a possible new design. 
+      </p>
+      <p>After the project was approved, I led a group effort to build a new site, move and merge content, add a new section for product UI content, and sketch out a new Copilot, AI and conversation section.</p>
+
+      <div class="before-after">
+        <section class="before-after-panel" aria-label="Style guide before">
+          <span class="panel-label">Before</span>
+          <button type="button" class="zoom-button" title="Zoom image">
+            <img src="../images/style-guide-redesign-before.png" alt="Original Content Style Guide landing page with a crowded top navigation bar and eight tiles, leaving no room for new sections." loading="lazy">
+          </button>
+        </section>
+        <section class="before-after-panel" aria-label="Style guide after">
+          <span class="panel-label">After</span>
+          <button type="button" class="zoom-button" title="Zoom image">
+            <img src="../images/style-guide-redesign-after.png" alt="Redesigned Content Style Guide with a left sidebar organizing content into six sections, including a new Product UI content section." loading="lazy">
+          </button>
+        </section>
+      </div>
+
+      <h2>The outcome</h2>
+      <p>
+        Content creators across Sage have a single place to find all the content guidelines they need, including product UI content and content for AI products.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <span>&copy; 2026 Laura Wixted</span>
+      <ul class="footer-links">
+        <li>
+          <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
+          <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
+        </li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="../js/copy-email.js"></script>
+  <script src="../js/image-zoom.js"></script>
+</body>
+</html>

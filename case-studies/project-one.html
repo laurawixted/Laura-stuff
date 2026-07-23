@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Project one title] — Laura Wixted</title>
-  <meta name="description" content="Case study: [one-line summary].">
+  <title>GRC tool comparison report — Laura Wixted</title>
+  <meta name="description" content="Case study: Managing content operations of a multi-author report comparing 14 GRC tools for a government client.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/components.css?v=11">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,42 +21,70 @@
     <div class="container-wide">
       <a class="logo" href="../index.html">Laura Wixted</a>
       <ul class="nav-links">
-        <li><a href="../index.html" aria-current="page">Work</a></li>
+        <li><a href="../index.html">Work</a></li>
         <li><a href="../about.html">About</a></li>
       </ul>
     </div>
   </header>
 
   <main id="main">
+    <div class="back-link-row container-wide">
+      <a class="back-link" href="../index.html#work"><span aria-hidden="true">&larr;</span> Back to selected work</a>
+    </div>
+
     <article class="section container-narrow">
-      <p class="text-small text-secondary">[Role] · [Year] · [Company/context]</p>
-      <h1>[Project one title]</h1>
+      <p class="text-small text-secondary">Content Designer · 2026 · Skylight</p>
+      <h1>Governance, Risk, & Compliance (GRC) tool comparison report</h1>
       <p>
-        [Replace with a one- or two-sentence framing of the problem and your
-        role in solving it.]
+        Managed the content operations of a multi-author report comparing 14 GRC tools to help a government client select the best solution.
       </p>
 
       <h2>The problem</h2>
       <p>
-        [What was broken or missing, and why it mattered to users or the
-        business.]
+        Different contributors had different writing styles, and with multiple authors, the report lacked a consistent voice and tone. Additionally, the structure of the report was inconsistent, making it difficult for stakeholders to follow and understand the content.
       </p>
 
       <h2>What I did</h2>
       <p>
-        [Your process and specific contributions — research, content
-        strategy, writing, testing, etc.]
+        Using the client's preferred style guide, I standardized the writing style across all sections of the report, ensuring a consistent voice and tone throughout.
       </p>
+      <p>I also streamlined the structure, added tables or charts to improve comprehension, and tightened the headings to make the whole document easy to scan.</p>
+      <p>Additionally, I coordinated with the various authors to ensure that risks and benefits were aligned and accurately represented throughout the report.</p>
 
-      <blockquote class="pull-quote">
-        “[Optional pull-quote from a stakeholder or user, if it strengthens
-        the story.]”
-      </blockquote>
+      <p>The restructured table of contents shows how the report became easier to navigate:</p>
+
+      <div class="before-after">
+        <section class="before-after-panel" aria-label="Table of contents before">
+          <span class="panel-label">Before</span>
+          <ul>
+            <li>Program and project management</li>
+            <li>Market research objectives</li>
+            <li>Service or product description</li>
+            <li>Background</li>
+            <li>Potential supplier information</li>
+            <li>Other pertinent information</li>
+            <li>Performance requirements</li>
+            <li>Market intelligence and industry analysis</li>
+            <li>Conclusions and recommendations</li>
+          </ul>
+        </section>
+        <section class="before-after-panel" aria-label="Table of contents after">
+          <span class="panel-label">After</span>
+          <ul>
+            <li>Executive Summary</li>
+            <li>Market Research Report Overview</li>
+            <li>GRC Tool Service and Product Description</li>
+            <li>Industry Analysis</li>
+            <li>Potential Suppliers</li>
+            <li>Vendor Analysis</li>
+            <li>Conclusions, Risks, and Next Steps</li>
+          </ul>
+        </section>
+      </div>
 
       <h2>The outcome</h2>
       <p>
-        [Result — qualitative or quantitative. What changed for users or the
-        product.]
+        The client was able to make an informed decision about which GRC tool to purchase.
       </p>
     </article>
   </main>
@@ -65,10 +93,14 @@
     <div class="container-wide">
       <span>&copy; 2026 Laura Wixted</span>
       <ul class="footer-links">
-        <li><a href="mailto:you@example.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li>
+          <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
+          <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
+        </li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
+  <script src="../js/copy-email.js"></script>
 </body>
 </html>

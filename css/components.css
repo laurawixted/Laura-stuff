@@ -34,7 +34,6 @@
   text-decoration: none;
   font-size: var(--text-small);
   letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 .nav-links a:hover,
@@ -49,7 +48,7 @@
 
 /* --- Hero --- */
 .hero {
-  padding-block: var(--space-9) var(--space-8);
+  padding-block: var(--space-8) var(--space-6);
 }
 
 .hero h1 {
@@ -64,6 +63,10 @@
 }
 
 /* --- Case study grid --- */
+#work.section {
+  padding-block-start: var(--space-6);
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -95,7 +98,6 @@
   display: inline-block;
   font-size: var(--text-small);
   color: var(--color-accent);
-  text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-bottom: var(--space-2);
 }
@@ -149,6 +151,7 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .testimonial-author .name {
@@ -159,6 +162,26 @@
 .testimonial-author .role {
   font-size: var(--text-small);
   color: var(--color-text-secondary);
+}
+
+/* --- Featured testimonial (landing page) --- */
+.featured-testimonial {
+  text-align: center;
+  padding-block: 0 var(--space-6);
+}
+
+.featured-testimonial blockquote {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-h3);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.featured-testimonial .testimonial-author {
+  justify-content: center;
+  text-align: left;
 }
 
 /* --- Pull quote (case study detail pages) --- */
@@ -178,16 +201,214 @@ blockquote.pull-quote {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(1);
   margin-bottom: var(--space-4);
 }
 
-/* --- Contact links row --- */
-.contact-links {
-  display: flex;
-  gap: var(--space-5);
-  list-style: none;
-  margin: var(--space-5) 0 0;
+/* --- Copy email --- */
+.copy-email {
+  background: none;
+  border: none;
   padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.copy-toast {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 0;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  animation: toast-fade-in 0.2s ease-out;
+}
+
+@keyframes toast-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- CTA block --- */
+.cta-block {
+  position: relative;
+  text-align: center;
+  padding-block: 0 var(--space-6);
+}
+
+.cta-button.copy-email {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-body);
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cta-button.copy-email:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.cta-block .copy-toast {
+  bottom: auto;
+  top: calc(100% - var(--space-6));
+  left: 0;
+  right: 0;
+}
+
+/* --- Before / after comparison --- */
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-block: var(--space-5);
+}
+
+@media (max-width: 640px) {
+  .before-after {
+    grid-template-columns: 1fr;
+  }
+}
+
+.before-after--single {
+  grid-template-columns: 1fr;
+}
+
+.before-after-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.before-after-panel .panel-label {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.before-after-panel ol,
+.before-after-panel ul {
+  margin: 0;
+  padding-left: var(--space-4);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+}
+
+.before-after-panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.before-after-panel ul li {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.before-after-panel ul li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.before-after-panel li + li {
+  margin-top: var(--space-2);
+}
+
+.before-after-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-sm);
+}
+
+/* --- Image zoom (lightbox) --- */
+.zoom-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.zoom-dialog {
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-2);
+  background: var(--color-surface);
+  max-width: min(92vw, 1400px);
+  max-height: 92vh;
+}
+
+.zoom-dialog::backdrop {
+  background: rgba(31, 30, 28, 0.7);
+}
+
+.zoom-dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(92vh - var(--space-6));
+  width: auto;
+  height: auto;
+  border-radius: var(--border-radius-sm);
+  cursor: zoom-out;
+}
+
+/* --- Back link --- */
+.back-link-row {
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.back-link span {
+  transition: transform 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--color-text-primary);
+}
+
+.back-link:hover span {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 640px) {
+  .back-link {
+    position: static;
+    margin-top: var(--space-5);
+  }
 }
 
 /* --- Footer --- */
@@ -216,4 +437,18 @@ blockquote.pull-quote {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.footer-links li {
+  position: relative;
+}
+
+.site-footer .copy-email {
+  color: var(--color-text-secondary);
+  text-decoration-color: currentColor;
+}
+
+.external-link-icon {
+  display: inline-block;
+  vertical-align: -0.125em;
 }
