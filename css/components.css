@@ -48,7 +48,7 @@
 
 /* --- Hero --- */
 .hero {
-  padding-block: var(--space-9) var(--space-8);
+  padding-block: var(--space-8) var(--space-6);
 }
 
 .hero h1 {
@@ -63,6 +63,10 @@
 }
 
 /* --- Case study grid --- */
+#work.section {
+  padding-block-start: var(--space-6);
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -160,6 +164,26 @@
   color: var(--color-text-secondary);
 }
 
+/* --- Featured testimonial (landing page) --- */
+.featured-testimonial {
+  text-align: center;
+  padding-block: 0 var(--space-6);
+}
+
+.featured-testimonial blockquote {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-h3);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.featured-testimonial .testimonial-author {
+  justify-content: center;
+  text-align: left;
+}
+
 /* --- Pull quote (case study detail pages) --- */
 blockquote.pull-quote {
   border-left: 3px solid var(--color-accent);
@@ -215,6 +239,74 @@ blockquote.pull-quote {
   }
 }
 
+/* --- CTA block --- */
+.cta-block {
+  position: relative;
+  text-align: center;
+  padding-block: 0 var(--space-6);
+}
+
+.cta-button.copy-email {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-body);
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.cta-button.copy-email:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.cta-block .copy-toast {
+  bottom: auto;
+  top: calc(100% - var(--space-6));
+  left: 0;
+  right: 0;
+}
+
+/* --- Back link --- */
+.back-link-row {
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.back-link span {
+  transition: transform 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--color-text-primary);
+}
+
+.back-link:hover span {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 640px) {
+  .back-link {
+    position: static;
+    margin-top: var(--space-5);
+  }
+}
+
 /* --- Footer --- */
 .site-footer {
   border-top: 1px solid var(--color-border);
@@ -250,4 +342,9 @@ blockquote.pull-quote {
 .site-footer .copy-email {
   color: var(--color-text-secondary);
   text-decoration-color: currentColor;
+}
+
+.external-link-icon {
+  display: inline-block;
+  vertical-align: -0.125em;
 }

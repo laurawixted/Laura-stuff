@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Project four title] — Laura Wixted</title>
-  <meta name="description" content="Case study: [one-line summary].">
+  <title>Cybersecurity dashboard simplification — Laura Wixted</title>
+  <meta name="description" content="Case study: Simplifying configuration options for creating custom widgets on a cybersecurity dashboard.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/components.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,40 +21,47 @@
     <div class="container-wide">
       <a class="logo" href="../index.html">Laura Wixted</a>
       <ul class="nav-links">
-        <li><a href="../index.html" aria-current="page">Work</a></li>
+        <li><a href="../index.html">Work</a></li>
         <li><a href="../about.html">About</a></li>
       </ul>
     </div>
   </header>
 
   <main id="main">
+    <div class="back-link-row container-wide">
+      <a class="back-link" href="../index.html#work"><span aria-hidden="true">&larr;</span> Back to selected work</a>
+    </div>
+
     <article class="section container-narrow">
-      <p class="text-small text-secondary">[Role] · [Year] · [Client or company]</p>
-      <h1>[Project four title]</h1>
+      <p class="text-small text-secondary">Content Designer · 2021 · CrowdStrike</p>
+      <h1>Cybersecurity dashboard simplification</h1>
       <p>
-        [One-paragraph overview of the project, your role, and what you delivered.]
+        Simplified configuration options for creating custom widgets on a cybersecurity dashboard.
       </p>
 
       <h2>The problem</h2>
       <p>
-        [Describe the problem: what wasn't working, who it affected, and why it mattered.]
+        Customers struggled to create a custom dashboard widget because the menu of options was too long, making it confusing to know where to start.
       </p>
 
       <h2>What I did</h2>
       <p>
-        [Describe your approach and the work you did.]
+        To simplify the user flow, I categorized the widget options with progressive disclosure in mind. As customers made decisions in one category, the options in the other categories dynamically changed to show only relevant options. I also added instructions and clarified the meaning of the tab titles.
       </p>
-      <p>[Add supporting details: methods, collaboration, artifacts you produced.]</p>
+      <p>Feedback revealed that customers no longer struggled to create the custom widgets on their dashboards. </p>
 
+      <!-- Hidden until a real quote is available
       <blockquote class="pull-quote">
         “[Optional pull-quote from a stakeholder or user, if it strengthens
         the story.]”
       </blockquote>
+      -->
 
       <h2>The outcome</h2>
       <p>
-        [Describe the results: what changed, metrics if available, and feedback received.]
+        The ease of creating custom widgets on cybersecurity dashboards continues to be a high priority for security experts, as described in this CrowdStrike blog post video that shows the dashboard from this project in action. The video demonstrates how the simplified configuration options make it easier for customers to create custom widgets on their dashboards.
       </p>
+      <p><a href="https://www.crowdstrike.com/tech-hub/endpoint-security/customized-dashboards/" target="_blank" rel="noopener">Endpoint Security – Customized Dashboards, May 2, 2024 <svg class="external-link-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a> (demo starts at 3:30)</p>
     </article>
   </main>
 
@@ -64,9 +71,9 @@
       <ul class="footer-links">
         <li>
           <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
-          <span class="copy-toast" role="status" hidden>Email copied</span>
+          <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
         </li>
-        <li><a href="https://www.linkedin.com/in/laurawixted/">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
