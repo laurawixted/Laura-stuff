@@ -6,13 +6,17 @@
   <title>About — Laura Wixted</title>
   <meta name="description" content="About Laura Wixted, content designer.">
 
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon-180.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css?v=11">
+  <link rel="stylesheet" href="css/components.css?v=13">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -29,10 +33,11 @@
 
   <main id="main">
     <section class="section container-narrow">
-      <img class="profile-photo" src="images/profile-photo-transparent.png" alt="Portrait of Laura Wixted">
       <h1>About</h1>
+      <img class="profile-photo" src="images/profile-photo-transparent.png" alt="Portrait of Laura Wixted">
+      <img src="images/heading-swash.svg" alt="" aria-hidden="true">
       <p>
-        I’m a Staff Content Designer at <a href="https://skylight.digital/" target="_blank" rel="noopener">Skylight <svg class="external-link-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>, where I design content to build user-friendly and accessible digital services for government agencies.
+        I'm a Staff Content Designer at <span style="white-space: nowrap"><a href="https://skylight.digital/" target="_blank" rel="noopener">Skylight <svg class="external-link-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg><span class="visually-hidden"> (opens in new tab)</span></a>,</span> where I design content to build user-friendly and accessible digital services for government agencies.
       </p>
       <p>
         Throughout my 15+ years of content design and technical writing, I've built content frameworks and written and edited customer-facing content across industries, from DB2 tools and cybersecurity to ed tech and civic tech.
@@ -43,14 +48,17 @@
       <p>
         When I'm not designing content, I enjoy hiking, reading, and exploring new places. I also love learning new skills and staying up-to-date with the latest trends in content design and user experience.
       </p>
+      <img id="compass-icon" src="images/compass-icon.svg" alt="" aria-hidden="true" width="64" height="64" style="display: block; margin: 1rem auto 0;">
     </section>
+
+    <img src="images/divider-line.svg" alt="" aria-hidden="true">
 
     <section class="section container-wide">
       <h2>What people say</h2>
       <div class="testimonial-grid">
 
         <div class="testimonial-card">
-          <blockquote>“She is a terrific collaborator, working equally easily with peers and both up and down the management chain. Beyond her writing and language skills, Laura has a passion for moving a team forward, sharing ideas, resources, and guidance that are practical and easy to use, making everyone around her better.”</blockquote>
+          <blockquote>She is a terrific collaborator, working equally easily with peers and both up and down the management chain. Beyond her writing and language skills, Laura has a passion for moving a team forward, sharing ideas, resources, and guidance that are practical and easy to use, making everyone around her better.”</blockquote>
           <div class="testimonial-author">
             <img src="images/pam-mayne-linkedin.jpeg" alt="" width="48" height="48">
             <div>
@@ -61,7 +69,7 @@
         </div>
 
         <div class="testimonial-card">
-          <blockquote>“Laura can hit the ground running no matter the starting line. A born leader, she knows the meaning of collaboration and partnership across any number of product teams. She can easily facilitate or drive customer-facing UI copy, content hierarchies, user flows, and information architecture across any platform. ”</blockquote>
+          <blockquote>Laura can hit the ground running no matter the starting line. A born leader, she knows the meaning of collaboration and partnership across any number of product teams. She can easily facilitate or drive customer-facing UI copy, content hierarchies, user flows, and information architecture across any platform. ”</blockquote>
           <div class="testimonial-author">
             <img src="images/carole-linkedin.jpeg" alt="" width="48" height="48">
             <div>
@@ -72,7 +80,7 @@
         </div>
 
         <div class="testimonial-card">
-          <blockquote>“She consistently brought fantastic insights and ran warm, welcoming, and highly professional UX sessions that helped strengthen our practice. Her contributions, collaborative spirit, and thoughtful leadership have made a lasting impact.”</blockquote>
+          <blockquote>She consistently brought fantastic insights and ran warm, welcoming, and highly professional UX sessions that helped strengthen our practice. Her contributions, collaborative spirit, and thoughtful leadership have made a lasting impact.”</blockquote>
           <div class="testimonial-author">
             <img src="images/avi-chazen-linkedin.jpeg" alt="" width="48" height="48">
             <div>
@@ -94,10 +102,26 @@
           <button type="button" class="copy-email" title="Copy email" data-email="laurawixted@gmail.com">Email</button>
           <span class="copy-toast" role="status" hidden>Copied laurawixted@gmail.com</span>
         </li>
-        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/laurawixted/" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in new tab)</span></a></li>
       </ul>
     </div>
   </footer>
   <script src="js/copy-email.js"></script>
+  <script>
+    (function () {
+      var compass = document.getElementById('compass-icon');
+      if (!compass || !('IntersectionObserver' in window)) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            compass.classList.add('compass-animate');
+          } else {
+            compass.classList.remove('compass-animate');
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(compass);
+    })();
+  </script>
 </body>
 </html>
