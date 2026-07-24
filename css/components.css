@@ -2,6 +2,32 @@
    Components
    ========================================================================== */
 
+/* --- Compass animation --- */
+@media (prefers-reduced-motion: no-preference) {
+  #compass-icon,
+  #compass-icon-hero {
+    transform-origin: center;
+  }
+  #compass-icon.compass-animate,
+  #compass-icon-hero.compass-animate {
+    animation: compass-settle 2.8s linear forwards;
+  }
+  @keyframes compass-settle {
+    0%   { transform: rotate(0deg); }
+    18%  { transform: rotate(360deg); }
+    33%  { transform: rotate(630deg); }
+    46%  { transform: rotate(800deg); }
+    57%  { transform: rotate(900deg); }
+    65%  { transform: rotate(930deg); }
+    72%  { transform: rotate(912deg); }
+    78%  { transform: rotate(924deg); }
+    84%  { transform: rotate(915deg); }
+    90%  { transform: rotate(920deg); }
+    95%  { transform: rotate(917deg); }
+    100% { transform: rotate(918deg); }
+  }
+}
+
 /* --- Nav --- */
 .site-nav {
   padding-block: var(--space-4);
@@ -64,7 +90,7 @@
 
 /* --- Case study grid --- */
 #work.section {
-  padding-block-start: var(--space-6);
+  padding-block-start: var(--space-7);
 }
 
 .case-study-grid {
@@ -80,18 +106,20 @@
 }
 
 .case-study-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border: none;
   border-radius: var(--radius);
   padding: var(--space-5);
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: border-color 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .case-study-card:hover {
-  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.11);
 }
 
 .case-study-card .tag {
@@ -125,10 +153,21 @@
 }
 
 .testimonial-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border: none;
   border-radius: var(--radius);
   padding: var(--space-5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.testimonial-card blockquote::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 26px;
+  background: url('../images/quote-mark.svg') no-repeat center / contain;
+  margin-bottom: var(--space-3);
+  opacity: 0.5;
 }
 
 .testimonial-card blockquote {
@@ -149,9 +188,9 @@
 .testimonial-author img {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 55%;
   object-fit: cover;
-  filter: grayscale(100%);
+  filter: sepia(0.4) saturate(0.85);
 }
 
 .testimonial-author .name {
@@ -167,7 +206,17 @@
 /* --- Featured testimonial (landing page) --- */
 .featured-testimonial {
   text-align: center;
-  padding-block: 0 var(--space-6);
+  padding-block: var(--space-7) var(--space-6);
+}
+
+.featured-testimonial blockquote::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 26px;
+  background: url('../images/quote-mark.svg') no-repeat center / contain;
+  margin: 0 auto var(--space-3);
+  opacity: 0.5;
 }
 
 .featured-testimonial blockquote {
@@ -199,9 +248,10 @@ blockquote.pull-quote {
 .profile-photo {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 55%;
   object-fit: cover;
-  filter: grayscale(1);
+  filter: sepia(0.4) saturate(0.85);
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
   margin-bottom: var(--space-4);
 }
 
