@@ -352,7 +352,6 @@ blockquote.pull-quote {
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   margin-bottom: var(--space-3);
 }
 
