@@ -130,6 +130,18 @@
   margin-bottom: var(--space-2);
 }
 
+.case-study-card .tag-type {
+  display: inline-block;
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
+  background: var(--color-border);
+  border-radius: 999px;
+  padding: 0.1em 0.6em;
+  margin-left: var(--space-2);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
 .case-study-card h3 {
   margin-bottom: var(--space-2);
 }
@@ -352,7 +364,6 @@ blockquote.pull-quote {
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   margin-bottom: var(--space-3);
 }
 
@@ -390,6 +401,12 @@ blockquote.pull-quote {
   width: 100%;
   height: auto;
   border-radius: var(--border-radius-sm);
+}
+
+.panel-caption {
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  color: var(--color-text-secondary);
 }
 
 /* --- Image zoom (lightbox) --- */
