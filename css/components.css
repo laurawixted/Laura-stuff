@@ -93,6 +93,11 @@
   padding-block-start: var(--space-7);
 }
 
+.work-intro .copy-toast {
+  position: static;
+  margin-left: var(--space-2);
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
