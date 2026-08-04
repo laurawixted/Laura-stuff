@@ -3,6 +3,11 @@
    ========================================================================== */
 
 /* --- Compass animation --- */
+#compass-icon {
+  display: block;
+  margin: var(--space-6) auto 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   #compass-icon,
   #compass-icon-hero {
@@ -269,6 +274,7 @@ blockquote.pull-quote {
   object-fit: cover;
   filter: sepia(0.4) saturate(0.85);
   box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+  margin-top: var(--space-4);
   margin-bottom: var(--space-4);
 }
 
@@ -310,7 +316,7 @@ blockquote.pull-quote {
 .cta-block {
   position: relative;
   text-align: center;
-  padding-block: 0 var(--space-6);
+  padding-block: var(--space-5) var(--space-6);
 }
 
 .cta-button.copy-email {
