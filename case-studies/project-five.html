@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI-assisted build — Laura Wixted</title>
-  <meta name="description" content="Case study: Writing a design system file that guides Claude, then using it to build and iterate on a federal migration site for 12 divisions.">
+  <meta name="description" content="Case study: Co-creating a design system file that guides Claude, then using it to build and iterate on a federal migration site for 12 divisions.">
 
   <link rel="icon" href="../images/favicon.svg?v=2" type="image/svg+xml">
   <link rel="icon" href="../images/favicon-32.png?v=2" sizes="32x32" type="image/png">
@@ -40,23 +40,43 @@
       <p class="text-small text-secondary">Content Designer · 2026 · Skylight</p>
       <h1>AI-assisted build</h1>
       <p>
-        I wrote a design system file that guides Claude, then used it to build and iterate on a federal migration site for 12 divisions.
+        I co-created a design system file that guides Claude, then used it to build and iterate on a federal migration site for 12 divisions.
       </p>
 
       <h2>The problem</h2>
       <p>
-        [Describe the problem: what the federal client needed, why migrating 12 divisions was hard, and what would have happened without a consistent system.]
+        The federal client needed to share frequent updates on a process migration project, but its web publishing model was too slow. Divisions didn't know the project's status or their next steps.
       </p>
 
       <h2>What I did</h2>
       <p>
-        [Describe the work: how you wrote the design system file that guides Claude, how you used it to build and iterate on the site, and any key decisions along the way.]
+        I proposed a new site, owned by Skylight, so we could control the publishing schedule. Sharing updates through the federal publishing team couldn't keep pace with the project, so stakeholders immediately chose a Skylight-owned site.
+      </p>
+      <p>
+        To build it quickly, I worked with a UX designer and a developer on a design system file based on the United States Web Design System (USWDS), so the site would match the federal branding the client's employees expect. I added content standards for capitalization, grammar, voice and tone, and accessibility, such as never using all caps and keeping a helpful, plain-language tone. The goal was for Claude to apply the same standards to every page. I also worked with engineering to adopt CI/CD, which let us release updates every two weeks.
+      </p>
+      <p>
+        Using a Claude-assisted workflow in GitHub, I built the site myself and iterated on it by incorporating feedback from Skylight and federal stakeholders and by correcting mistakes Claude made.
+      </p>
+      <p>
+        For example, federal stakeholders wanted to see all updates and artifacts on one page, so I merged the Artifacts and Updates pages into a single Roadmap page that shows linked artifacts as part of the project timeline. Claude mistakenly kept the original pages in the top navigation and linked to them, so I corrected the navigation and removed the old pages from the GitHub repo. Claude also forgot some of the content standards, often adding all-caps eyebrow text above headings. I removed that text or, where it was useful, kept it with corrected capitalization.
+      </p>
+      <p>
+        <strong>Takeaway:</strong> The design system file set the UX standard, but it didn't guarantee compliance, so I reviewed each build against the design and content guidelines.
       </p>
 
       <h2>The outcome</h2>
       <p>
-        [Describe the outcome: what shipped, how the design system file kept the 12 divisions consistent, and any measurable results or feedback.]
+        Divisions stayed on track during the project phase that Skylight owned, with updates going out every two weeks, compared with every two months before. When the project moved to a new team, the site held all the information they needed, and served as the single source of truth.
       </p>
+      <p>
+        The final site had 3 top-level topics and 9 project deliverables, each on its own page:
+      </p>
+      <ul>
+        <li>5 interactive pages synthesizing UX research about division-level processes</li>
+        <li>3 PDF reports with division-level findings and recommendations</li>
+        <li>A 16-page prototype site showing the recommended path forward</li>
+      </ul>
     </article>
   </main>
 
